@@ -37,6 +37,12 @@ public class AlumnoController {
 		return lstSalida;
 	}
 	
+	@GetMapping("/porId/{idAlumno}")
+	public List<Alumno> listaAlumnoPorId(@PathVariable("idAlumno") int idAlumno){
+		List<Alumno> lstSalida = alumnoService.listaAlumnoPorId(idAlumno);
+		return lstSalida;
+	}
+	
 }
 
 
